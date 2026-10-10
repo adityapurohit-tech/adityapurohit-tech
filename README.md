@@ -273,7 +273,7 @@ I build AI systems that can be trusted, from a messy dataset to a tested, explai
 - 🧪 **LLM evaluation, guardrails & audit trails**
 - ⚡ **Real-time AI backends**: Flask, WebSockets, Redis, PostgreSQL, Neo4j
 
-**🚀 What I can build next, and what teams are hiring for**
+**🚀 What I can build next**
 
 - 🕸️ **GraphRAG**: knowledge graphs plus retrieval for richer, connected answers
 - 🧰 **Tool-using AI agents** that call APIs and internal systems, with approval gates
