@@ -276,7 +276,7 @@ I work across the full AI product lifecycle, from a messy dataset to a tested, e
 | 🧪 **Quality & safety** | Golden test sets, quality gates, guardrails, audit trails | Numbers you can show a stakeholder before launch |
 | 🔎 **AI reviews** | Audit an existing model or LLM app and find where it could fail | A clear list of risks, with fixes |
 | 🚀 **Prototype to proof of concept** | Turn a rough idea into a tested, working prototype | A demo backed by real numbers |
-| ➕ **Something not listed?** | Tell me the problem and I'll outline how I'd approach it | A clear plan, and an honest view of the best next step |
+| ➕ **Something not listed?** | Tell me the problem and I'll outline how I'd approach it | A clear plan and an honest view of the best next step |
 
 **How we can work together:** &nbsp; 💼 Full-time roles &nbsp;·&nbsp; 📋 Contract and freelance projects &nbsp;·&nbsp; 🔎 Short consulting reviews
 
