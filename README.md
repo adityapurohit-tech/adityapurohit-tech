@@ -26,7 +26,7 @@
 
 | 🧠 Trustworthy LLM Apps | 📊 Explainable ML | 🤖 Agentic AI Systems |
 |:--|:--|:--|
-| **AI that proves its answers.** Every claim is traced back to a source, and when it can't be verified, the system says so instead of guessing. | **Predictions you can defend.** Calibrated scores with plain-English reasons, so every decision can be explained to a stakeholder. | **Automation with judgment.** Parallel agents, an independent critic and a human in the loop for the calls that matter. |
+| **AI that proves its answers.** Every claim is traced back to a source, and when it can't be verified, the system says so instead of guessing. | **Predictions you can defend.** Calibrated scores with plain-English reasons, so every decision can be explained to a stakeholder. | **Automation with judgment.** Parallel agents, an independent critic, and a human in the loop for the calls that matter. |
 
 ---
 
@@ -75,9 +75,13 @@ class AdityaPurohit:
 
 ## 🎬 See It in Action
 
-<sub>🟩 green = the outcome &nbsp;·&nbsp; 🟥 red = something the system rejected</sub>
+<p align="center"><i>Short traces from my live demos: what the systems do when a question is hard, a model is wrong, or a decision is borderline.</i></p>
+<p align="center"><sub>🟩 outcome &nbsp;·&nbsp; 🟥 rejected by the system</sub></p>
 
-**🧠 RAG platform: when the answer isn't in the documents**
+### 1 · 🛑 It refuses instead of guessing
+
+> **Scenario:** a question the documents don't answer.
+> **What happens:** retrieval confidence is too low, so the model is **never called**. The reply comes back in **under 4 ms**.
 
 ```diff
   ❯ Q: How many languages are interpreter services available in?
@@ -88,7 +92,10 @@ class AdityaPurohit:
 +   └─ reply .......... "Not found in sources"                    ⏱ under 4 ms
 ```
 
-**🧠 RAG platform: when the model is wrong and the system catches it**
+### 2 · 🔍 It catches the model being wrong
+
+> **Scenario:** a protocol question where the model's own answer is just "no".
+> **What happens:** the grounding check can't verify that answer, so it is **withheld** and the **exact source sentence** is returned instead.
 
 ```diff
   ❯ Q: Does the discharge protocol apply to patients who leave against medical advice?
@@ -99,7 +106,10 @@ class AdityaPurohit:
 +                              medical advice; those patients follow Protocol CL-DS-07."
 ```
 
-**🤖 Multi-agent system: a hot lead, and a borderline one**
+### 3 · 🤖 It reviews its own work, and knows when to ask a human
+
+> **Scenario:** a hot lead, then a borderline one.
+> **What happens:** an independent critic **rejects the first draft** and approves the second. The borderline lead **pauses the whole graph** until a person decides.
 
 ```diff
   ❯ Hot lead  →  triage 0.83 (Hot) · 4 callback requests vs an average of 1.6 · 0 unsubscribes
