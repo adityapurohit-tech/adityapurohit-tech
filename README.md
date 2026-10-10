@@ -5,19 +5,19 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=2DD4BF&center=true&vCenter=true&width=760&lines=AI%2FML+Engineer+who+ships+end+to+end;Models+you+can+explain%2C+systems+you+can+audit;From+scikit-learn+to+LLM+agents%2C+with+guardrails;Hard+rules+first.+ML+second.+Always+auditable." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1500&color=14B8A6&center=true&vCenter=true&width=780&height=40&lines=AI%2FML+Engineer+who+ships+end+to+end;Models+you+can+explain%2C+systems+you+can+audit;From+scikit-learn+to+LLM+agents%2C+with+guardrails;Hard+rules+first.+ML+second.+Always+auditable." alt="Typing SVG" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📍_Kolhapur,_India-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
-  <img src="https://img.shields.io/badge/🎓_PG_Diploma_in_AI-IIT_Jodhpur-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
-  <img src="https://img.shields.io/badge/🟢_Open_to_AI%2FML_roles_and_projects-0f2027?style=flat-square&labelColor=0f2027&color=22c55e" />
+  <img height="34" src="https://img.shields.io/badge/Kolhapur%2C%20India-21262d?style=for-the-badge" />
+  <img height="34" src="https://img.shields.io/badge/PG%20Diploma%20in%20AI%20%C2%B7%20IIT%20Jodhpur-1f3a5f?style=for-the-badge" />
+  <img height="34" src="https://img.shields.io/badge/Open%20to%20AI%2FML%20roles%20and%20projects-166534?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:adityapurohit2002@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img height="42" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" /></a>
+  <a href="mailto:adityapurohit2002@gmail.com"><img height="42" src="https://img.shields.io/badge/Email-Say%20hello-30363d?style=for-the-badge&logo=gmail&logoColor=white&labelColor=30363d" /></a>
 </p>
 
 ---
@@ -56,20 +56,44 @@ class AdityaPurohit:
 
 ## ⚡ Impact at a Glance
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Lead%20model%20ROC--AUC-0.863%20(baseline%200.632)-2dd4bf?style=for-the-badge&labelColor=0f2027" />
-  <img src="https://img.shields.io/badge/Leads%20processed-5%2C000%20%C2%B7%20zero%20failures-22c55e?style=for-the-badge&labelColor=0f2027" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Answerable%20questions%20correct-2%2F13%20%E2%86%92%2013%2F13-a78bfa?style=for-the-badge&labelColor=0f2027" />
-  <img src="https://img.shields.io/badge/Safety-100%25%20held%20throughout-f59e0b?style=for-the-badge&labelColor=0f2027" />
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Cached%20answers-~1%20ms-38bdf8?style=for-the-badge&labelColor=0f2027" />
-  <img src="https://img.shields.io/badge/Refusals-~2.4%20s%20%E2%86%92%20under%204%20ms-fb7185?style=for-the-badge&labelColor=0f2027" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <h3>0.863</h3>
+      <b>ROC-AUC</b><br/>
+      lead model, against a 0.632 baseline
+    </td>
+    <td align="center" width="33%">
+      <h3>5,000</h3>
+      <b>leads, zero failures</b><br/>
+      processed end to end
+    </td>
+    <td align="center" width="33%">
+      <h3>11 agents</h3>
+      <b>working together</b><br/>
+      parallel branches, critic loop, human review
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <h3>13 / 13</h3>
+      <b>answerable questions correct</b><br/>
+      up from 2 / 13, with safety held at 100%
+    </td>
+    <td align="center" width="33%">
+      <h3>~1 ms</h3>
+      <b>cached answers</b><br/>
+      Redis, cleared automatically on re-ingestion
+    </td>
+    <td align="center" width="33%">
+      <h3>2.4 s → under 4 ms</h3>
+      <b>refusals</b><br/>
+      the model is never called
+    </td>
+  </tr>
+</table>
 
-<sub>RAG figures come from my own 19-question golden evaluation set, which I treat as a regression suite rather than proof of real-world accuracy. The lead model was trained on simulated outcome labels, because the dataset's original labels carried no signal (ROC-AUC 0.50). I disclose that in the model card.</sub>
+<p align="center"><sub>RAG figures come from my own 19-question golden evaluation set, which I treat as a regression suite rather than proof of real-world accuracy. The lead model was trained on simulated outcome labels, because the dataset's original labels carried no signal (ROC-AUC 0.50). I disclose that in the model card.</sub></p>
 
 ---
 
@@ -145,7 +169,7 @@ flowchart LR
 | **Approach** | An 11-agent LangGraph workflow. A compliance gate runs before any model. Lead triage (logistic regression with reason codes) and campaign clustering (KMeans) run in parallel. A critic loop is capped at 3 revisions, and borderline leads pause the graph for human review. Redis holds fast state and frequency caps, and Neo4j holds the lead, campaign and decision graph. |
 | **Result** | 0.863 ROC-AUC against a 0.632 baseline, and 5,000 leads processed with zero failures. |
 
-<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" /> <img src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white" /> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" />
+<img height="26" src="https://img.shields.io/badge/LangGraph-1f3a5f?style=flat" /> <img height="26" src="https://img.shields.io/badge/scikit--learn-1f3a5f?style=flat&logo=scikitlearn&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/Redis-1f3a5f?style=flat&logo=redis&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/Neo4j-1f3a5f?style=flat&logo=neo4j&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/Flask-1f3a5f?style=flat&logo=flask&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/WebSockets-1f3a5f?style=flat" />
 
 <details>
 <summary><b>🔎 See the agent graph</b></summary>
@@ -185,7 +209,7 @@ flowchart LR
 | **Approach** | Hybrid retrieval (FAISS + BM25 fused with Reciprocal Rank Fusion), a confidence gate that skips the model when nothing relevant is found, and claim-level grounding that blocks any unverified claim or number. Redis handles caching and rate limiting, and every decision is written to a PostgreSQL audit trail. |
 | **Result** | Answerable questions went from 2 of 13 to 13 of 13 correct on my golden set, with 100% safety held throughout. Refusals dropped from about 2.4 s to under 4 ms. |
 
-<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" />
+<img height="26" src="https://img.shields.io/badge/Flask-1f3a5f?style=flat&logo=flask&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/LangChain-1f3a5f?style=flat&logo=langchain&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/FAISS-1f3a5f?style=flat" /> <img height="26" src="https://img.shields.io/badge/Redis-1f3a5f?style=flat&logo=redis&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/PostgreSQL-1f3a5f?style=flat&logo=postgresql&logoColor=white" /> <img height="26" src="https://img.shields.io/badge/WebSockets-1f3a5f?style=flat" />
 
 <details>
 <summary><b>🔎 See the pipeline</b></summary>
@@ -244,10 +268,14 @@ I'm open to AI / ML engineering roles and select project collaborations.
 | 🧪 **Evaluation & quality gates for LLM apps** | Measurable accuracy and safety numbers before anything ships |
 | ⚙️ **Full-stack AI apps** | Flask / REST / WebSocket backends with audit trails and live dashboards |
 
-**How I work:** &nbsp; 1️⃣ Understand the decision and its risks &nbsp;→&nbsp; 2️⃣ Validate the data &nbsp;→&nbsp; 3️⃣ Build the smallest working version, with tests &nbsp;→&nbsp; 4️⃣ Measure it and show you the numbers
+**How I work**
+
+| 1 · Understand | 2 · Validate | 3 · Build | 4 · Measure |
+|:--|:--|:--|:--|
+| The decision and its risks | The data, before any model | The smallest working version, with tests | Show you the numbers |
 
 <p align="center">
-  <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img src="https://img.shields.io/badge/📩_Start_a_conversation-2dd4bf?style=for-the-badge&labelColor=0f2027" /></a>
+  <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img height="46" src="https://img.shields.io/badge/Start%20a%20conversation-2563eb?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
 ---
@@ -275,19 +303,19 @@ I'm open to AI / ML engineering roles and select project collaborations.
 
 **Languages & ML**
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" /> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" /> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" /> <img src="https://img.shields.io/badge/NLP-0f2027?style=flat-square" />
+<img height="30" src="https://img.shields.io/badge/Python-1f3a5f?style=flat&logo=python&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/scikit--learn-1f3a5f?style=flat&logo=scikitlearn&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/PyTorch-1f3a5f?style=flat&logo=pytorch&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/TensorFlow-1f3a5f?style=flat&logo=tensorflow&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/NLP-1f3a5f?style=flat" />
 
 **LLM & Agents**
 
-<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square" /> <img src="https://img.shields.io/badge/BM25-0f2027?style=flat-square" /> <img src="https://img.shields.io/badge/Embeddings-0f2027?style=flat-square" />
+<img height="30" src="https://img.shields.io/badge/LangChain-4c3a7a?style=flat&logo=langchain&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/LangGraph-4c3a7a?style=flat" /> <img height="30" src="https://img.shields.io/badge/FAISS-4c3a7a?style=flat" /> <img height="30" src="https://img.shields.io/badge/BM25-4c3a7a?style=flat" /> <img height="30" src="https://img.shields.io/badge/Embeddings-4c3a7a?style=flat" />
 
 **Backend & Data**
 
-<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/REST_APIs-0f2027?style=flat-square" /> <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" /> <img src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white" />
+<img height="30" src="https://img.shields.io/badge/Flask-14532d?style=flat&logo=flask&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/REST%20APIs-14532d?style=flat" /> <img height="30" src="https://img.shields.io/badge/WebSockets-14532d?style=flat" /> <img height="30" src="https://img.shields.io/badge/PostgreSQL-14532d?style=flat&logo=postgresql&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/MongoDB-14532d?style=flat&logo=mongodb&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/Redis-14532d?style=flat&logo=redis&logoColor=white" /> <img height="30" src="https://img.shields.io/badge/Neo4j-14532d?style=flat&logo=neo4j&logoColor=white" />
 
 **Cloud & Tools**
 
-<img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square" /> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img height="30" src="https://img.shields.io/badge/AWS-7c4a03?style=flat" /> <img height="30" src="https://img.shields.io/badge/Git-7c4a03?style=flat&logo=git&logoColor=white" />
 
 ---
 
@@ -302,12 +330,12 @@ I'm open to AI / ML engineering roles and select project collaborations.
 ## 📫 Let's Connect
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:adityapurohit2002@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img height="42" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" /></a>
+  <a href="mailto:adityapurohit2002@gmail.com"><img height="42" src="https://img.shields.io/badge/Email-Say%20hello-30363d?style=for-the-badge&logo=gmail&logoColor=white&labelColor=30363d" /></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=adityapurohit-tech&label=Profile%20views&color=2dd4bf&style=flat-square" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=adityapurohit-tech&label=Profile%20views&color=1f3a5f&style=flat-square" alt="Profile views" />
 </p>
 
 <p align="center">
