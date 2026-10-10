@@ -210,13 +210,15 @@ flowchart LR
 
 <p align="center">
   <a href="https://github.com/adityapurohit-tech/saasquatch-lead-scorer">
-    <img width="31%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=saasquatch-lead-scorer&theme=radical&hide_border=true" />
+    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=saasquatch-lead-scorer&theme=radical&hide_border=true" />
   </a>
   <a href="https://github.com/adityapurohit-tech/AI-Expert-Call-Analyzer">
-    <img width="31%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Expert-Call-Analyzer&theme=radical&hide_border=true" />
+    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Expert-Call-Analyzer&theme=radical&hide_border=true" />
   </a>
+</p>
+<p align="center">
   <a href="https://github.com/adityapurohit-tech/AI-Decision-Simulation-System">
-    <img width="31%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Decision-Simulation-System&theme=radical&hide_border=true" />
+    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Decision-Simulation-System&theme=radical&hide_border=true" />
   </a>
 </p>
 
