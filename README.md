@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img height="34" src="https://img.shields.io/badge/Kolhapur%2C%20India-21262d?style=for-the-badge" />
+  <img height="34" src="https://img.shields.io/badge/India%20%C2%B7%20Open%20to%20remote-21262d?style=for-the-badge" />
   <img height="34" src="https://img.shields.io/badge/PG%20Diploma%20in%20AI%20%C2%B7%20IIT%20Jodhpur-1f3a5f?style=for-the-badge" />
   <img height="34" src="https://img.shields.io/badge/Open%20to%20AI%2FML%20roles%20and%20projects-166534?style=for-the-badge" />
 </p>
@@ -35,7 +35,7 @@
 ```python
 class AdityaPurohit:
     role      = "AI/ML Engineer"
-    based_in  = "Kolhapur, India 🇮🇳"
+    based_in  = "India 🇮🇳 (open to remote)"
     education = "PG Diploma in Artificial Intelligence, IIT Jodhpur"
     focus     = [
         "Machine learning & decisioning systems",
@@ -271,7 +271,7 @@ I build AI systems that can be trusted, from a messy dataset to a tested, explai
 - 🧪 **LLM evaluation, guardrails & audit trails**
 - ⚡ **Real-time AI backends**: Flask, WebSockets, Redis, PostgreSQL, Neo4j
 
-**🚀 What I can build next**
+**🚀 What I can build next, and what teams are hiring for**
 
 - 🕸️ **GraphRAG**: knowledge graphs plus retrieval for richer, connected answers
 - 🧰 **Tool-using AI agents** that call APIs and internal systems, with approval gates
