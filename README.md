@@ -264,18 +264,26 @@ flowchart LR
 
 ## 🤝 Work With Me
 
-I'm open to AI / ML engineering roles and select project collaborations.
+I work across the full AI product lifecycle, from a messy dataset to a tested, explainable system. **If it involves data, models or decisions that need to be trusted, I can probably help.**
 
-| What I can build | What you get |
-|:--|:--|
-| 📄 **Document Q&A (RAG) with guardrails** | Answers that cite the exact source, or a clear "not found" instead of a guess |
-| 📊 **Predictive scoring & decisioning** | Calibrated scores with plain-English reasons for every decision |
-| 🤖 **Multi-agent workflows** | Automation that pauses for human approval on borderline cases |
-| 🧪 **Evaluation & quality gates for LLM apps** | Measurable accuracy and safety numbers before anything ships |
-| ⚙️ **Full-stack AI apps** | Flask / REST / WebSocket backends with audit trails and live dashboards |
+| Area | What it covers | What you get |
+|:--|:--|:--|
+| 🧠 **LLM & GenAI apps** | RAG and document Q&A, chatbots, information extraction, prompt and evaluation pipelines | Answers grounded in your own data, with sources or a clear "not found" |
+| 📊 **Machine learning** | Classification, scoring, clustering, model selection and calibration | Models you can explain, with measured accuracy |
+| 🗣️ **NLP & search** | Embeddings, semantic and keyword search, text understanding | Tools that understand meaning, not just keywords |
+| 🤖 **Automation & agents** | Multi-agent workflows, business-rule engines, human-in-the-loop approvals | Automation that knows when to stop and ask |
+| ⚙️ **Backend & full-stack** | REST APIs, WebSockets, live dashboards, schema design on PostgreSQL, MongoDB, Redis and Neo4j | A working product, not just a notebook |
+| 🧪 **Quality & safety** | Golden test sets, quality gates, guardrails, audit trails | Numbers you can show a stakeholder before launch |
+| 🔎 **AI reviews** | Audit an existing model or LLM app and find where it could fail | A clear list of risks, with fixes |
+| 🚀 **Prototype to proof of concept** | Turn a rough idea into a tested, working prototype | A demo backed by real numbers |
+| ➕ **Something not listed?** | Describe the problem and I'll tell you honestly if I'm the right fit | A straight answer, even if it's "not me" |
+
+**How we can work together:** &nbsp; 💼 Full-time roles &nbsp;·&nbsp; 📋 Contract and freelance projects &nbsp;·&nbsp; 🔎 Short consulting reviews
+
+**Where I've built:** &nbsp; healthcare (demo systems) &nbsp;·&nbsp; marketing and sales operations &nbsp;·&nbsp; business software for tax and accounting &nbsp;·&nbsp; dairy and agri-business operations
 
 <p align="center">
-  <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img height="46" src="https://img.shields.io/badge/Start%20a%20conversation-2563eb?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img height="46" src="https://img.shields.io/badge/Tell%20me%20the%20problem-2563eb?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
 ---
