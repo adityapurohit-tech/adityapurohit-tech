@@ -125,28 +125,6 @@ class AdityaPurohit:
 
 ---
 
-## 🏗️ How I Build AI Systems
-
-```mermaid
-flowchart LR
-  A["1 · Validate the data"] --> B["2 · Baseline, then compare models"]
-  B --> C["3 · Hard rules before any model"]
-  C --> D["4 · Independent evaluation or critic"]
-  D --> E{"Confident?"}
-  E -->|yes| F["Act"]
-  E -->|no| G["Escalate to a human, or refuse"]
-  F --> H[("5 · Audit trail")]
-  G --> H
-  classDef step fill:#0f2027,stroke:#2dd4bf,color:#e6fffb,stroke-width:1.5px
-  classDef decide fill:#3b2a0a,stroke:#f59e0b,color:#ffffff,stroke-width:1.5px
-  classDef safe fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
-  class A,B,C,D,F step
-  class E decide
-  class G,H safe
-```
-
----
-
 ## 🚀 Project Spotlights
 
 ### 🤖 Multi-Agent Lead Decisioning &nbsp;·&nbsp; [View repo](https://github.com/adityapurohit-tech/multi-agent-lead-decisioning)
@@ -244,6 +222,46 @@ flowchart LR
 
 ---
 
+## 🧠 How I Think, Decide and Solve Problems
+
+> **I don't only ask "does it work?" I ask "how will it fail, and how will I know?"**
+> These are real decisions from my projects, and the reasoning behind each one.
+
+### The loop I follow
+
+```mermaid
+flowchart LR
+  A["1 · Frame the risk"] --> B["2 · Validate the data"]
+  B --> C["3 · Start simple, then compare models"]
+  C --> D["4 · Hard rules before any model"]
+  D --> E["5 · Independent evaluation or critic"]
+  E --> F{"Confident?"}
+  F -->|yes| G["Act"]
+  F -->|no| H["Escalate to a human, or refuse"]
+  G --> I[("6 · Audit trail")]
+  H --> I
+  classDef step fill:#0f2027,stroke:#2dd4bf,color:#e6fffb,stroke-width:1.5px
+  classDef decide fill:#3b2a0a,stroke:#f59e0b,color:#ffffff,stroke-width:1.5px
+  classDef safe fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
+  class A,B,C,D,E,G step
+  class F decide
+  class H,I safe
+```
+
+### Real decisions, and why I made them
+
+| 🎯 Situation | 🛠️ What I did | 💡 Why it mattered |
+|:--|:--|:--|
+| 🧪 **The training labels were random.** They carried no signal (ROC-AUC 0.50). | Simulated outcomes from documented business logic, and disclosed that in the model card. | A model trained on noise still reports a number, and that number means nothing. |
+| ⚖️ **Two models, one choice.** Logistic regression against gradient boosting. | Compared them with 5-fold cross-validation (0.850 vs 0.836) and kept logistic regression. | It scored higher, and it gives every lead plain-English reason codes. |
+| 🛡️ **An LLM can sound right and be wrong.** | Added claim-level grounding: any unverified claim or number blocks the answer. | In healthcare, a wrong dose or duration is the most dangerous hallucination. |
+| 🔍 **The writer shouldn't grade its own work.** | Added an independent critic, capped at 3 revisions, then a human decides. | It prevents rubber-stamping and endless loops. |
+| 🎚️ **Where to set the "not found" threshold.** | Set 0.40 in the gap between answerable (≥ 0.47) and unanswerable (≤ 0.34) questions. | I tuned on that set, so I treat it as a regression suite, not proof of real-world accuracy. |
+| 🐞 **Bugs that only show up in the real flow.** | Fixed three: a cache hit never sent its final "decision" event, tests shared the live rate limiter, and PostgreSQL crashed when its terminal closed. I added tests for the first two. | Failures hide in the seams between components, not on the happy path. |
+| 🔒 **Design for failure and privacy.** | Redis fails open, audit history survives document re-ingestion, and questions are stored only as SHA-256 hashes. | A cache outage shouldn't take the system down, and a healthcare question can contain patient data. |
+
+---
+
 ## 🤝 Work With Me
 
 I'm open to AI / ML engineering roles and select project collaborations.
@@ -256,25 +274,9 @@ I'm open to AI / ML engineering roles and select project collaborations.
 | 🧪 **Evaluation & quality gates for LLM apps** | Measurable accuracy and safety numbers before anything ships |
 | ⚙️ **Full-stack AI apps** | Flask / REST / WebSocket backends with audit trails and live dashboards |
 
-**How I work**
-
-| 1 · Understand | 2 · Validate | 3 · Build | 4 · Measure |
-|:--|:--|:--|:--|
-| The decision and its risks | The data, before any model | The smallest working version, with tests | Show you the numbers |
-
 <p align="center">
   <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img height="46" src="https://img.shields.io/badge/Start%20a%20conversation-2563eb?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
-
----
-
-## 🧭 Engineering Principles
-
-- 🧪 **Validate the data before the model.** If the labels are noise, say so out loud.
-- 🛡️ **Hard rules first, ML second.** Compliance checks run before any model is called.
-- 🔍 **Never let the writer grade its own work.** An independent critic checks every draft.
-- 🙋 **Escalate when unsure.** Borderline cases pause for a human instead of guessing.
-- 📜 **Every decision leaves a trail** that can be replayed and audited.
 
 ---
 
