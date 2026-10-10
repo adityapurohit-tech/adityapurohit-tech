@@ -27,7 +27,6 @@
 | 🧠 Trustworthy LLM Apps | 📊 Explainable ML | 🤖 Agentic AI Systems |
 |:--|:--|:--|
 | **AI that proves its answers.** Every claim is traced back to a source, and when it can't be verified, the system says so instead of guessing. | **Predictions you can defend.** Calibrated scores with plain-English reasons, so every decision can be explained to a stakeholder. | **Automation with judgment.** Parallel agents, an independent critic, and a human in the loop for the calls that matter. |
-| 📈 **13/13** answerable questions correct, with **100%** safety held | 📈 **0.863** ROC-AUC against a **0.632** baseline | 📈 **5,000** leads processed with **zero** failures |
 
 ---
 
