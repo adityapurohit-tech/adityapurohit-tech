@@ -248,39 +248,28 @@ flowchart LR
   class H,I safe
 ```
 
-### Real decisions and why I made them
+### Real decisions, and why
 
-| 🎯 Situation | 🛠️ What I did | 💡 Why it mattered |
-|:--|:--|:--|
-| 🧪 **The training labels were random.** They carried no signal (ROC-AUC 0.50). | Simulated outcomes from documented business logic, and disclosed that in the model card. | A model trained on noise still reports a number, and that number means nothing. |
-| ⚖️ **Two models, one choice.** Logistic regression against gradient boosting. | Compared them with 5-fold cross-validation (0.850 vs 0.836) and kept logistic regression. | It scored higher, and it gives every lead plain-English reason codes. |
-| 🛡️ **An LLM can sound right and be wrong.** | Added claim-level grounding: any unverified claim or number blocks the answer. | In healthcare, a wrong dose or duration is the most dangerous hallucination. |
-| 🔍 **The writer shouldn't grade its own work.** | Added an independent critic, capped at 3 revisions, then a human decides. | It prevents rubber-stamping and endless loops. |
-| 🎚️ **Where to set the "not found" threshold.** | Set 0.40 in the gap between answerable (≥ 0.47) and unanswerable (≤ 0.34) questions. | I tuned on that set, so I treat it as a regression suite, not proof of real-world accuracy. |
-| 🐞 **Bugs that only show up in the real flow.** | Fixed three: a cache hit never sent its final "decision" event, tests shared the live rate limiter, and PostgreSQL crashed when its terminal closed. I added tests for the first two. | Failures hide in the seams between components, not on the happy path. |
-| 🔒 **Design for failure and privacy.** | Redis fails open, audit history survives document re-ingestion, and questions are stored only as SHA-256 hashes. | A cache outage shouldn't take the system down, and a healthcare question can contain patient data. |
+| What I did | Why it mattered |
+|:--|:--|
+| 🧪 **Caught random training labels** (ROC-AUC 0.50) and used documented, disclosed simulated outcomes | A model trained on noise reports a number that means nothing |
+| 🛡️ **Blocked unverified claims and numbers** before they reach the user | In healthcare, a wrong dose is the most dangerous hallucination |
+| 🔍 **Added an independent critic, then a human**, so the writer never grades its own work | No rubber-stamping, no endless loops |
+| 🔒 **Designed for failure and privacy**: Redis fails open, questions stored only as hashes | An outage shouldn't stop the system, and questions can contain patient data |
 
 ---
 
 ## 🤝 Work With Me
 
-I work across the full AI product lifecycle, from a messy dataset to a tested, explainable system. **If it involves data, models or decisions that need to be trusted, I can probably help.**
+I work across the full AI lifecycle, from a messy dataset to a tested, explainable system. Open to **full-time roles, contracts and consulting.**
 
-| Area | What it covers | What you get |
-|:--|:--|:--|
-| 🧠 **LLM & GenAI apps** | RAG and document Q&A, chatbots, information extraction, prompt and evaluation pipelines | Answers grounded in your own data, with sources or a clear "not found" |
-| 📊 **Machine learning** | Classification, scoring, clustering, model selection and calibration | Models you can explain, with measured accuracy |
-| 🗣️ **NLP & search** | Embeddings, semantic and keyword search, text understanding | Tools that understand meaning, not just keywords |
-| 🤖 **Automation & agents** | Multi-agent workflows, business-rule engines, human-in-the-loop approvals | Automation that knows when to stop and ask |
-| ⚙️ **Backend & full-stack** | REST APIs, WebSockets, live dashboards, schema design on PostgreSQL, MongoDB, Redis and Neo4j | A working product, not just a notebook |
-| 🧪 **Quality & safety** | Golden test sets, quality gates, guardrails, audit trails | Numbers you can show a stakeholder before launch |
-| 🔎 **AI reviews** | Audit an existing model or LLM app and find where it could fail | A clear list of risks, with fixes |
-| 🚀 **Prototype to proof of concept** | Turn a rough idea into a tested, working prototype | A demo backed by real numbers |
-| ➕ **Something not listed?** | Tell me the problem and I'll outline how I'd approach it | A clear plan and an honest view of the best next step |
+- 🧠 **LLM & GenAI apps**: RAG, chatbots, information extraction
+- 📊 **Machine learning**: scoring, classification, clustering
+- 🤖 **Agents & automation**: multi-agent workflows with human approval
+- ⚙️ **Full-stack AI products**: APIs, dashboards, databases
+- 🧪 **Evaluation & AI reviews**: quality gates, guardrails, audit trails
 
-**How we can work together:** &nbsp; 💼 Full-time roles &nbsp;·&nbsp; 📋 Contract and freelance projects &nbsp;·&nbsp; 🔎 Short consulting reviews
-
-**Where I've built:** &nbsp; healthcare (demo systems) &nbsp;·&nbsp; marketing and sales operations &nbsp;·&nbsp; business software for tax and accounting &nbsp;·&nbsp; dairy and agri-business operations
+**…or anything where data, models or decisions need to be trusted.** Tell me the problem.
 
 <p align="center">
   <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img height="46" src="https://img.shields.io/badge/Tell%20me%20the%20problem-2563eb?style=for-the-badge&logo=gmail&logoColor=white" /></a>
