@@ -35,7 +35,7 @@
 
 ```python
 class AdityaPurohit:
-    role      = "AI/ML Engineer & Full Stack Developer @ Microtech Solutions"
+    role      = "AI/ML Engineer"
     based_in  = "Kolhapur, India 🇮🇳"
     education = "PG Diploma in Artificial Intelligence, IIT Jodhpur"
     focus     = [
