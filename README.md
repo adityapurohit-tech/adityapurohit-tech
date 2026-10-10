@@ -209,17 +209,12 @@ flowchart LR
 ### 📦 More Projects
 
 <p align="center">
-  <a href="https://github.com/adityapurohit-tech/saasquatch-lead-scorer">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=saasquatch-lead-scorer&theme=radical&hide_border=true" />
-  </a>
-  <a href="https://github.com/adityapurohit-tech/AI-Expert-Call-Analyzer">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Expert-Call-Analyzer&theme=radical&hide_border=true" />
-  </a>
+  <a href="https://github.com/adityapurohit-tech/saasquatch-lead-scorer"><img width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=saasquatch-lead-scorer&theme=radical&hide_border=true" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/adityapurohit-tech/AI-Expert-Call-Analyzer"><img width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Expert-Call-Analyzer&theme=radical&hide_border=true" /></a>
 </p>
+
 <p align="center">
-  <a href="https://github.com/adityapurohit-tech/AI-Decision-Simulation-System">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Decision-Simulation-System&theme=radical&hide_border=true" />
-  </a>
+  <br/>
+  <a href="https://github.com/adityapurohit-tech/AI-Decision-Simulation-System"><img width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Decision-Simulation-System&theme=radical&hide_border=true" /></a>
 </p>
 
 ---
@@ -273,7 +268,7 @@ I build AI systems that can be trusted, from a messy dataset to a tested, explai
 - 🧪 **LLM evaluation, guardrails & audit trails**
 - ⚡ **Real-time AI backends**: Flask, WebSockets, Redis, PostgreSQL, Neo4j
 
-**🚀 What I can build next**
+**🚀 What I can build next, and what teams are hiring for**
 
 - 🕸️ **GraphRAG**: knowledge graphs plus retrieval for richer, connected answers
 - 🧰 **Tool-using AI agents** that call APIs and internal systems, with approval gates
