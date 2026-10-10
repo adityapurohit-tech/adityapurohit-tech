@@ -248,7 +248,7 @@ flowchart LR
   class H,I safe
 ```
 
-### Real decisions, and why I made them
+### Real decisions and why I made them
 
 | 🎯 Situation | 🛠️ What I did | 💡 Why it mattered |
 |:--|:--|:--|
