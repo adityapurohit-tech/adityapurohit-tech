@@ -10,19 +10,23 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white" />
+  <img src="https://img.shields.io/badge/📍_Kolhapur,_India-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
+  <img src="https://img.shields.io/badge/🎓_PG_Diploma_in_AI-IIT_Jodhpur-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
+  <img src="https://img.shields.io/badge/🟢_Open_to_AI%2FML_roles_and_projects-0f2027?style=flat-square&labelColor=0f2027&color=22c55e" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📍_Kolhapur,_India-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
-  <img src="https://img.shields.io/badge/🎓_PG_Diploma_in_AI-IIT_Jodhpur-0f2027?style=flat-square&labelColor=0f2027&color=2dd4bf" />
-  <img src="https://img.shields.io/badge/🟢_Open_to_AI%2FML_roles-0f2027?style=flat-square&labelColor=0f2027&color=22c55e" />
+  <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:adityapurohit2002@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
+
+---
+
+## 💡 What I Bring
+
+| 🧠 Trustworthy LLM Apps | 📊 Explainable ML | 🤖 Agentic Workflows |
+|:--|:--|:--|
+| Every claim is checked against a source, or the system refuses instead of guessing | Calibrated scores with plain-English reason codes for every decision | Parallel agents, independent critics, and human approval where it matters |
 
 ---
 
@@ -69,15 +73,43 @@ class AdityaPurohit:
 
 ---
 
-## 🎯 What I Work On
+## 🎬 See It in Action
 
-| | |
-|:--|:--|
-| 📊 **Machine Learning** | Predictive scoring and clustering with scikit-learn: model comparison, calibration, and explainable reason codes |
-| 🗣️ **NLP & LLM Apps** | Embeddings, hybrid retrieval, grounding and hallucination detection |
-| 🤖 **Agentic Systems** | Multi-agent workflows in LangGraph with parallel branches, critic loops and human-in-the-loop review |
-| 🧪 **Evaluation & Safety** | Golden test sets, quality gates, compliance rules and audit trails |
-| ⚙️ **Full Stack Engineering** | REST APIs, WebSockets, PostgreSQL, MongoDB, Redis and Neo4j |
+**🧠 RAG platform: when the answer isn't in the documents**
+
+```text
+❯ Q: How many languages are interpreter services available in?
+  ├─ input guards ... passed
+  ├─ cache .......... miss
+  ├─ retrieval ...... best match is below the 0.40 confidence threshold
+  ├─ generation ..... NOT CALLED (the model never gets the chance to guess)
+  └─ reply .......... "Not found in sources"                    ⏱ under 4 ms
+```
+
+**🧠 RAG platform: when the model is wrong and the system catches it**
+
+```text
+❯ Q: Does the discharge protocol apply to patients who leave against medical advice?
+  ├─ model's own answer ... "no"                    ✗ can't be verified against the source
+  ├─ grounding check ...... rejected
+  └─ reply ................ the exact source sentence instead:
+                            "This protocol does not apply to patients who leave against
+                             medical advice; those patients follow Protocol CL-DS-07."   ✓
+```
+
+**🤖 Multi-agent system: a hot lead, and a borderline one**
+
+```text
+❯ Hot lead  →  triage 0.83 (Hot) · 4 callback requests vs an average of 1.6 · 0 unsubscribes
+  ├─ Engagement draft 1 ... CTA "Get Audit"      ✗ critic: hot leads need a meeting CTA
+  ├─ Engagement draft 2 ... meeting CTA          ✓ critic passed
+  └─ route ................ sales handoff
+
+❯ Borderline lead  →  triage 0.594 (just under the 0.6 Hot threshold)
+  └─ route ................ ⏸ graph paused for a human decision (LangGraph interrupt)
+```
+
+<sub>Demo runs use synthetic healthcare documents and synthetic lead data. No real patient or customer data.</sub>
 
 ---
 
@@ -95,10 +127,10 @@ flowchart LR
   G --> H
   classDef step fill:#0f2027,stroke:#2dd4bf,color:#e6fffb,stroke-width:1.5px
   classDef decide fill:#3b2a0a,stroke:#f59e0b,color:#ffffff,stroke-width:1.5px
-  classDef human fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
+  classDef safe fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
   class A,B,C,D,F step
   class E decide
-  class G,H human
+  class G,H safe
 ```
 
 ---
@@ -122,7 +154,7 @@ flowchart LR
 flowchart LR
   L([Lead]) --> CX["Context<br/>Redis + Neo4j"]
   CX --> CG{"Compliance gate"}
-  CG -->|"fails rules"| S["Suppress"]
+  CG -->|"fails rules"| S["Suppressed<br/>(model never called)"]
   CG --> T["Lead triage<br/>scikit-learn"]
   CG --> CO["Campaign optimizer<br/>KMeans"]
   T --> R{"Decision router"}
@@ -135,11 +167,13 @@ flowchart LR
   R -->|"low intent"| N["Nurture"]
   classDef core fill:#0f2027,stroke:#2dd4bf,color:#e6fffb,stroke-width:1.5px
   classDef gate fill:#3b2a0a,stroke:#f59e0b,color:#ffffff,stroke-width:1.5px
-  classDef human fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
-  class L,CX,T,CO,E,CM,N,S core
+  classDef safe fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
+  class L,CX,T,CO,E,CM,N core
   class CG,R,QC gate
-  class HR human
+  class S,HR safe
 ```
+
+<sub>🟦 Teal = steps · 🟧 Amber = checkpoints · 🟪 Purple = safe stops, where the system holds back on purpose</sub>
 
 </details>
 
@@ -159,26 +193,26 @@ flowchart LR
 ```mermaid
 flowchart LR
   Q([Question]) --> G{"Input guards"}
-  G -->|"injection or personal medical advice"| R1["Refuse"]
+  G -->|"injection or personal medical advice"| R1["Request declined"]
   G --> C{"Redis cache"}
   C -->|"hit, about 1 ms"| A([Answer])
   C -->|"miss"| H["Hybrid retrieval<br/>FAISS + BM25 + RRF"]
   H --> T{"Confidence gate"}
-  T -->|"too low"| N["Not found"]
+  T -->|"too low"| N["Replies: not in the documents<br/>(model never called)"]
   T --> L["Generate from retrieved chunks only"]
   L --> V{"Claim-level grounding"}
-  V -->|"unverified claim or number"| B["Block, quote the source instead"]
+  V -->|"unverified claim or number"| B["Answer withheld,<br/>source sentence shown instead"]
   V --> D["Risk-tiered decision"]
   D --> P[("PostgreSQL audit trail")]
   classDef core fill:#0f2027,stroke:#2dd4bf,color:#e6fffb,stroke-width:1.5px
   classDef gate fill:#3b2a0a,stroke:#f59e0b,color:#ffffff,stroke-width:1.5px
-  classDef stop fill:#3a1212,stroke:#ef4444,color:#ffffff,stroke-width:1.5px
-  classDef audit fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
+  classDef safe fill:#2a1f4d,stroke:#a78bfa,color:#ffffff,stroke-width:1.5px
   class Q,A,H,L,D core
   class G,C,T,V gate
-  class R1,N,B stop
-  class P audit
+  class R1,N,B,P safe
 ```
+
+<sub>🟦 Teal = steps · 🟧 Amber = checkpoints · 🟪 Purple = safe stops. These are the system refusing on purpose, not errors.</sub>
 
 </details>
 
@@ -194,6 +228,26 @@ flowchart LR
   <a href="https://github.com/adityapurohit-tech/AI-Decision-Simulation-System">
     <img width="31%" src="https://github-readme-stats.vercel.app/api/pin/?username=adityapurohit-tech&repo=AI-Decision-Simulation-System&theme=radical&hide_border=true" />
   </a>
+</p>
+
+---
+
+## 🤝 Work With Me
+
+I'm open to AI / ML engineering roles and select project collaborations.
+
+| What I can build | What you get |
+|:--|:--|
+| 📄 **Document Q&A (RAG) with guardrails** | Answers that cite the exact source, or a clear "not found" instead of a guess |
+| 📊 **Predictive scoring & decisioning** | Calibrated scores with plain-English reasons for every decision |
+| 🤖 **Multi-agent workflows** | Automation that pauses for human approval on borderline cases |
+| 🧪 **Evaluation & quality gates for LLM apps** | Measurable accuracy and safety numbers before anything ships |
+| ⚙️ **Full-stack AI apps** | Flask / REST / WebSocket backends with audit trails and live dashboards |
+
+**How I work:** &nbsp; 1️⃣ Understand the decision and its risks &nbsp;→&nbsp; 2️⃣ Validate the data &nbsp;→&nbsp; 3️⃣ Build the smallest working version, with tests &nbsp;→&nbsp; 4️⃣ Measure it and show you the numbers
+
+<p align="center">
+  <a href="mailto:adityapurohit2002@gmail.com?subject=Let%27s%20talk%20about%20a%20project"><img src="https://img.shields.io/badge/📩_Start_a_conversation-2dd4bf?style=for-the-badge&labelColor=0f2027" /></a>
 </p>
 
 ---
@@ -219,21 +273,33 @@ flowchart LR
 
 ## 🛠️ Toolbox
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,flask,pytorch,tensorflow,sklearn,postgres,mongodb,redis,neo4j,aws,git&perline=11" alt="Tech Stack" />
-</p>
+**Languages & ML**
 
-<p align="center"><sub><b>Also:</b> LangChain · LangGraph · FAISS · BM25 · NLP · WebSockets · REST APIs</sub></p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" /> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" /> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" /> <img src="https://img.shields.io/badge/NLP-0f2027?style=flat-square" />
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityapurohit-tech&layout=compact&theme=radical&hide_border=true&exclude_repo=sanskrit-english-nmt,AI-Driven-Multi-Agent-Marketing-System" alt="Top languages" />
-</p>
+**LLM & Agents**
+
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square" /> <img src="https://img.shields.io/badge/BM25-0f2027?style=flat-square" /> <img src="https://img.shields.io/badge/Embeddings-0f2027?style=flat-square" />
+
+**Backend & Data**
+
+<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/REST_APIs-0f2027?style=flat-square" /> <img src="https://img.shields.io/badge/WebSockets-010101?style=flat-square" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" /> <img src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white" />
+
+**Cloud & Tools**
+
+<img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square" /> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
 
 ---
 
-## 🤝 Let's Connect
+## 🎓 Education & Learning
 
-I'm open to AI / ML engineering roles where reliability matters as much as capability.
+- **Post-Graduate Diploma in Artificial Intelligence**, IIT Jodhpur (2025 – 2026)
+- **AI & ML Bootcamp**, Udemy
+- **AI Engineer** and **AI / Data Scientist** tracks, OneRoadmap
+
+---
+
+## 📫 Let's Connect
 
 <p align="center">
   <a href="https://www.linkedin.com/in/aditya-purohit-77a287227/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
