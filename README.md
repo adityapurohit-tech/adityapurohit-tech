@@ -261,13 +261,23 @@ flowchart LR
 
 ## 🤝 Work With Me
 
-I work across the full AI lifecycle, from a messy dataset to a tested, explainable system. Open to **full-time roles, contracts and consulting.**
+I build AI systems that can be trusted, from a messy dataset to a tested, explainable product. Open to **full-time roles, contracts and consulting.**
 
-- 🧠 **LLM & GenAI apps**: RAG, chatbots, information extraction
-- 📊 **Machine learning**: scoring, classification, clustering
-- 🤖 **Agents & automation**: multi-agent workflows with human approval
-- ⚙️ **Full-stack AI products**: APIs, dashboards, databases
-- 🧪 **Evaluation & AI reviews**: quality gates, guardrails, audit trails
+**✅ What I've built**
+
+- 🧠 **RAG & document Q&A** with claim-level verification
+- 🤖 **Multi-agent workflows** (LangGraph) with human-in-the-loop approval
+- 📊 **Explainable ML**: lead scoring and campaign clustering with reason codes
+- 🧪 **LLM evaluation, guardrails & audit trails**
+- ⚡ **Real-time AI backends**: Flask, WebSockets, Redis, PostgreSQL, Neo4j
+
+**🚀 What I can build next, and what teams are hiring for**
+
+- 🕸️ **GraphRAG**: knowledge graphs plus retrieval for richer, connected answers
+- 🧰 **Tool-using AI agents** that call APIs and internal systems, with approval gates
+- 📈 **LLM evals in CI**: regression test sets and quality gates that block a bad release
+- 💬 **Private-data copilots** for support, operations and internal knowledge
+- 🔌 **MCP and A2A integrations** (going deeper on these now)
 
 **…or anything where data, models or decisions need to be trusted.** Tell me the problem.
 
