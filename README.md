@@ -57,9 +57,18 @@ class AdityaPurohit:
 
 ## ⚡ Impact at a Glance
 
-<p align="center">
-  <img src="assets/impact.svg" width="100%" alt="Verified metrics: lead model ROC-AUC 0.863 against a 0.632 baseline; 5,000 leads processed with zero failures; 11 agents in the graph; 13 of 13 answerable questions correct, up from 2 of 13, with safety held at 100%; cached answers in about 1 ms; refusal latency from 2.4 seconds to under 4 ms." />
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/0.863-0f766e?style=for-the-badge" alt="0.863" /><br/><br/><b>ROC-AUC</b><br/>lead model, against a 0.632 baseline<br/><br/></td>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/5%2C000-1d4ed8?style=for-the-badge" alt="5%2C000" /><br/><br/><b>Leads processed</b><br/>end to end, with zero failures<br/><br/></td>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/11-6d28d9?style=for-the-badge" alt="11" /><br/><br/><b>Agents working together</b><br/>parallel branches, critic loop, human review<br/><br/></td>
+  </tr>
+  <tr>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/13%20%2F%2013-0f766e?style=for-the-badge" alt="13%20%2F%2013" /><br/><br/><b>Answerable questions correct</b><br/>up from 2 / 13, with safety held at 100%<br/><br/></td>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/~1%20ms-1d4ed8?style=for-the-badge" alt="~1%20ms" /><br/><br/><b>Cached answers</b><br/>Redis, cleared automatically when documents change<br/><br/></td>
+    <td align="center" width="33%"><br/><img height="50" src="https://img.shields.io/badge/%3C%204%20ms-6d28d9?style=for-the-badge" alt="%3C%204%20ms" /><br/><br/><b>Refusal latency</b><br/>down from 2.4 s, because the model is never called<br/><br/></td>
+  </tr>
+</table>
 
 <p align="center"><sub>RAG figures come from my own 19-question golden evaluation set, which I treat as a regression suite rather than proof of real-world accuracy. The lead model was trained on simulated outcome labels, because the dataset's original labels carried no signal (ROC-AUC 0.50). I disclose that in the model card.</sub></p>
 
@@ -67,17 +76,41 @@ class AdityaPurohit:
 
 ## 🎬 See It in Action
 
+<sub>🟩 green = the outcome &nbsp;·&nbsp; 🟥 red = something the system rejected</sub>
+
 **🧠 RAG platform: when the answer isn't in the documents**
 
-<img src="assets/action-rag-not-found.svg" width="100%" alt="Terminal trace: for a question the documents don't answer, retrieval confidence falls below the 0.40 threshold, generation is not called, and the system replies 'Not found in sources' in under 4 milliseconds." />
+```diff
+  ❯ Q: How many languages are interpreter services available in?
+    ├─ input guards ... passed
+    ├─ cache .......... miss
+    ├─ retrieval ...... best match is below the 0.40 confidence threshold
+    ├─ generation ..... NOT CALLED (the model never gets the chance to guess)
++   └─ reply .......... "Not found in sources"                    ⏱ under 4 ms
+```
 
 **🧠 RAG platform: when the model is wrong and the system catches it**
 
-<img src="assets/action-rag-caught.svg" width="100%" alt="Terminal trace: the model answers 'no', which can't be verified against the source, so the grounding check rejects it and the system returns the exact source sentence instead." />
+```diff
+  ❯ Q: Does the discharge protocol apply to patients who leave against medical advice?
+-   ├─ model's own answer ... "no"      ✗ can't be verified against the source
+    ├─ grounding check ...... rejected
++   └─ reply ................ the exact source sentence instead:
++                             "This protocol does not apply to patients who leave against
++                              medical advice; those patients follow Protocol CL-DS-07."
+```
 
 **🤖 Multi-agent system: a hot lead, and a borderline one**
 
-<img src="assets/action-agents.svg" width="100%" alt="Terminal trace: a hot lead scores 0.83, the first draft is rejected by the critic for lacking a meeting call to action, the second passes, and the route is sales handoff. A borderline lead scoring 0.594 pauses the graph for a human decision." />
+```diff
+  ❯ Hot lead  →  triage 0.83 (Hot) · 4 callback requests vs an average of 1.6 · 0 unsubscribes
+-   ├─ Engagement draft 1 ... CTA "Get Audit"      ✗ critic: hot leads need a meeting CTA
++   ├─ Engagement draft 2 ... meeting CTA          ✓ critic passed
++   └─ route ................ sales handoff
+
+  ❯ Borderline lead  →  triage 0.594 (just under the 0.6 Hot threshold)
+    └─ route ................ ⏸ graph paused for a human decision (LangGraph interrupt)
+```
 
 <sub>Demo runs use synthetic healthcare documents and synthetic lead data. No real patient or customer data.</sub>
 
